@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><!-- bootstrap css link -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> <!-- bootstrap js link  -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i,800,800i,900" rel="stylesheet"> <!-- google font link -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><!-- font Awesome -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"><!-- css link  -->
+	<link rel="icon" type="image" href="images/favicon.png"><!--  favicon  -->
+	<link rel="stylesheet" type="text/css" href="css/calender.css">
+	<link rel="stylesheet" type="text/css" href="https://code.highcharts.com/css/highcharts.css"><!--  chart css -->
+    <link rel="stylesheet" type="text/css" href="css/chart.css"><!-- chart css here -->
+    <script src="https://code.highcharts.com/highcharts.js"></script><!-- chart js here  -->
+    <script src="https://code.highcharts.com/modules/exporting.js"></script><!-- Revenue js  -->
+	<script src="https://code.highcharts.com/modules/export-data.js"></script><!-- Revenue js  -->
+	
+	<!--  vector map link here  -->
+	
+	<link href="css/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.vmap.js"></script>
+    <script type="text/javascript" src="js/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.vmap.sampledata.js"></script>
+    <!--  vector map links end here  -->
+
+</head>
+<body>
+	<div id="main-wrapper"> <!-- main wrapper open here  -->
+		<div class="left-side-menu"> <!--  left side menu start here  -->
+			<div class="logo"> <!--  logo  -->
+				<a href="#">
+					<img src="images/logo.png" alt="logo" title="Dashboard" height="16"/>
+				</a>
+			</div> <!--  logo end here  -->
+			<nav> <!--  navigation start here  -->
+				<ul>
+					<li class="nav-title">
+						Navigation
+					</li>	
+					<li>
+						<a href="" class="nav-link active">
+							<i class="fas fa-tachometer-alt"></i>
+							<span class="digit">2</span>
+							<span> Dashboards </span>
+							<div class="clearfix"></div>
+						</a>
+					</li>
+				</ul>
+			</nav> <!--  navigation end here  -->
+		</div> <!--  left side menu end here  -->
+		<div class="content-page"> <!-- content page start here -->
+			<div class="content">
+				<div class="top-bar"><!-- top bar start here  -->
+					<div class="right-top-bar">
+						<ul class="float-right mb-0">
+							<li class="lang">
+								<a href="#" class="nav-link">
+									<img src="images/us.jpg" alt="us-flag" title="US-FLAG" height="12" class="mr-1" />
+									<span class="align-middle">English</span>
+									<i class="fas fa-chevron-down"></i>
+								</a>
+								<div class="dropdown-list">
+									<a href="#" class="dropdown-item">
+                                        <img src="images/germany.jpg" alt="germany" title="GARMANY" class="mr-2" height="12"> 
+                                        <span class="align-middle">Germany</span>
+                                    </a>
+									<a href="#" class="dropdown-item">
+                                        <img src="images/italy.jpg" alt="italy" title="ITLY" class="mr-2" height="12"> 
+                                        <span class="align-middle">Italy</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <img src="images/russia.jpg" alt="russia" title="RUSSIA" class="mr-2" height="12"> 
+                                        <span class="align-middle">Russia</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <img src="images/spain.jpg" alt="spain" title="SPIAN" class="mr-2" height="12"> 
+                                        <span class="align-middle">Spain</span>
+                                    </a>
+                                </div>
+							</li>
+							<li class="notification">
+								<a href="#" class="nav-link">
+									<i class="far fa-bell"></i>
+									<span class="noti-icon"></span>	
+								</a>
+								<div class="dropdown-list">
+									<div class="noti-title dropdown-item">
+										<h5 class="m-0">
+											<span class="float-right">
+												<a href="">Clear All</a>
+											</span>
+												Notification
+										</h5>
+									</div>
+									<div class="notification-list">
+										<a href="" class="notification-list-section">
+											<div class="notification-list-icon">
+												<i class="fas fa-comment"></i>
+											</div>
+											<p class="noti-details">
+												Girish Boke commented on Admin
+                                                 <span class="timing">
+                                                 	1 min ago
+                                                 </span>
+											</p>
+										</a>
+										<a href="" class="notification-list-section">
+											<div class="notification-list-icon bg-info">
+												<i class="fas fa-user"></i>
+											</div>
+											<p class="noti-details">
+												New user registered.
+                                                 <span class="timing">
+                                                 	5 hours ago
+                                                 </span>
+											</p>
+										</a>
+										<a href="" class="notification-list-section">
+											<div class="notification-list-icon">
+												<img src="images/user.png" class="user-image" alt="user image" title="Akshay Chidre">
+											</div>
+											<p class="noti-details">
+												Akshay Chidre
+                                                 <span class="timing">
+                                                 	Hi, How are you? What about our next meeting
+                                                 </span>
+											</p>
+										</a>
+										<a href="" class="notification-list-section">
+											<div class="notification-list-icon">
+												<i class="fas fa-comment"></i>
+											</div>
+											<p class="noti-details">
+												Baldev commented on Admin
+                                                 <span class="timing">
+                                                 	4 days ago
+                                                 </span>
+											</p>
+										</a>
+										<a href="" class="notification-list-section">
+											<div class="notification-list-icon">
+												<img src="images/aniket.png" class="user-image" alt="user image" title="Akshay Chidre">
+											</div>
+											<p class="noti-details">
+												Aniket Shinde
+                                                 <span class="timing">
+                                                 	Wow ! this admin looks good and awesome design
+                                                 </span>
+											</p>
+										</a>
+										<a href="" class="notification-list-section">
+											<div class="notification-list-icon">
+												<i class="fas fa-heart"></i>
+											</div>
+											<p class="noti-details">
+												Carlos Crouch liked
+                                                 <span class="timing">
+                                                 	13 days ago
+                                                 </span>
+											</p>
+										</a>
+									</div>
+									<a href="" class="view-all notification-list-section text-center">
+									View All
+								</a>
+								</div>	
+								
+							</li>
+							<li class="user-section">
+								<a href="" class="nav-link user">
+									<span class="user-picture">
+										<img src="images/user.png" class="user-image" alt="user image" title="Akshay Chidre">
+									</span>	
+									<span>
+										<span class="user-name">
+											Akshay Chidre
+										</span>
+										<span class="user-position">
+											Founder
+										</span>
+									</span>
+								</a>
+								<div class="dropdown-list">
+									<div class="user-section-title">
+										<h6 class="mb-0">
+											Welcome !
+										</h6>
+									</div>
+									<a href="" class="user-link-section">
+										<i class="fas fa-user-circle mr-2"></i>
+										<span>My Account</span>
+									</a>
+									<a href="" class="user-link-section">
+										<i class="fas fa-cog mr-2"></i>
+										<span>Setting</span>
+									</a>
+									<a href="" class="user-link-section">
+										<i class="fas fa-life-ring mr-2"></i>
+										<span>Support</span>
+									</a>
+									<a href="" class="user-link-section">
+										<i class="fas fa-lock mr-2"></i>
+										<span>Lock Screen</span>
+									</a>
+									<a href="" class="user-link-section">
+										<i class="fas fa-sign-out-alt mr-2"></i>
+										<span>Logout</span>
+									</a>
+								</div>
+								
+							</li>	
+							<div class="clearfix"></div>				
+						</ul>
+					</div>
+					<div class="left-top-bar">
+						<form>
+							<div class="input-group">
+								<input type="text"  placeholder="Search..." class="form-control">
+								<i class="fas fa-search search-icon"></i>
+								<div class="button">
+								<button class="button-style" type="button"> Search </button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div><!-- top bar end here -->
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<div class="page-title-box">
+								<div class="page-title-right-section">
+									<form class="form-inline">
+										<a href="" class=" button ml-2">
+											<i class="far fa-calendar-alt"></i>
+										</a>
+										<a href="" class="button ml-2">
+											<i class="fas fa-sync-alt"></i>
+										</a>
+										<a href="" class="button ml-2">
+											<i class="fas fa-share-alt"></i>
+										</a>
+									</form>
+									<div class="clearfix"></div>
+								</div>
+								<div class="page-title-left-section">
+									<h4>Dashboard</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-5">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="card">
+										<div class="card-body">
+											<div class="float-right">
+												<i class="fas fa-users widget-icon"></i>
+											</div>
+											<h5 class="heading mt-0">
+												Customers
+											</h5>
+											<h3>
+												36,254
+											</h3>
+											<p class="mb-0">
+												<span class="green d-block"> 
+													<i class="fas fa-arrow-up mr-1"></i>
+													5.27%
+												</span>
+												<span class="">
+													Since last month
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="card">
+										<div class="card-body">
+											<div class="float-right">
+												<i class="fas fa-shopping-cart  widget-icon"></i>
+											</div>
+											<h5 class="heading mt-0">
+												Orders
+											</h5>
+											<h3>
+												5,543
+											</h3>
+											<p class="mb-0">
+												<span class="red d-block"> 
+													<i class="fas fa-arrow-down mr-1"></i>
+													1.08%
+												</span>
+												<span class="">
+													Since last month
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="card">
+										<div class="card-body">
+											<div class="float-right">
+												<i class="fas fa-dollar-sign widget-icon"></i>
+											</div>
+											<h5 class="heading mt-0">
+												Revenue
+											</h5>
+											<h3>
+												36,254
+											</h3>
+											<p class="mb-0">
+												<span class="red d-block"> 
+													<i class="fas fa-arrow-down mr-1"></i>
+													4.87%
+												</span>
+												<span class="">
+													Since last month
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="card">
+										<div class="card-body">
+											<div class="float-right">
+												<i class="fas fa-chart-line widget-icon"></i>
+											</div>
+											<h5 class="heading mt-0">
+												Growth
+											</h5>
+											<h3>
+												5,543
+											</h3>
+											<p class="mb-0">
+												<span class="green d-block"> 
+													<i class="fas fa-arrow-up mr-1"></i>
+													7.00%
+												</span>
+												<span class="">
+													Since last month
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-7">
+							<div class="card">
+								<div class="card-body">
+									<div class="float-right dropdown-Projections">
+										<a href="" class="card-drop">
+											<i class="fas fa-ellipsis-v"></i>
+										</a>
+										<div class="dropdown-list">
+											<a href="" class="dropdown-item">Sales Report</a>
+											<a href="" class="dropdown-item">Export Report</a>
+											<a href="" class="dropdown-item">Profit</a>
+											<a href="" class="dropdown-item">Action</a>
+										</div>
+									</div>
+									<h4 class="Projections-heading">Projections Vs Actuals</h4>
+									<div>
+										<div id="container" class=""></div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-8">
+							<div class="card">
+								<div class="card-body">
+									<div class="float-right dropdown-Projections">
+										<a href="" class="card-drop">
+											<i class="fas fa-ellipsis-v"></i>
+										</a>
+										<div class="dropdown-list">
+											<a href="" class="dropdown-item">Sales Report</a>
+											<a href="" class="dropdown-item">Export Report</a>
+											<a href="" class="dropdown-item">Profit</a>
+											<a href="" class="dropdown-item">Action</a>
+										</div>
+									</div>
+									<h4 class="Projections-heading mb-4">Revenue</h4>
+									<div class="revenue-chart-content-bg">
+										<div class="row text-center">
+											<div class="col-md-6">
+												<p class="text mb-0 current mt-4">Current Week</p>
+												<h2 class="font-weight-normal mb-4 mt-2 ">
+													<span class="noti-icon mr-1"></span>
+													<span class="price">$58,254</span>
+												</h2>
+											</div>
+											<div class="col-md-6">
+												<p class="text mb-0 mt-4">Previous Week</p>
+												<h2 class="font-weight-normal  mb-4 mt-2 ">
+													<span class="noti-icon previous  mr-1"></span>
+													<span class="price">$58,254</span>
+												</h2>
+											</div>
+										</div>
+									</div>
+									<div id="revenue"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4">
+							<div class="card revenue-section">
+								<div class="card-body">
+									<div class="float-right dropdown-Projections">
+										<a href="" class="card-drop">
+											<i class="fas fa-ellipsis-v"></i>
+										</a>
+										<div class="dropdown-list">
+											<a href="" class="dropdown-item">Sales Report</a>
+											<a href="" class="dropdown-item">Export Report</a>
+											<a href="" class="dropdown-item">Profit</a>
+											<a href="" class="dropdown-item">Action</a>
+										</div>
+									</div>
+									<h4 class="Projections-heading mb-4">REVENUE BY LOCATION</h4>
+									<div class="mb-2 mt-4">
+										<div id="vmap" ></div>
+									</div>
+									<h5 class="mb-1 mt-0 font-weight-normal">
+										New York
+									</h5>
+									<div class="progress-percent">
+										<span class="progress-value font-weight-bold">
+											72k 
+										</span>
+										<div class="progress progress-sm">
+											<div class="progress-bar"></div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<h5 class="mb-1 mt-0 font-weight-normal">
+										England
+									</h5>
+									<div class="progress-percent">
+										<span class="progress-value font-weight-bold">
+											39k 
+										</span>
+										<div class="progress progress-sm">
+											<div class="progress-bar-2"></div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+
+									<h5 class="mb-1 mt-0 font-weight-normal">
+										India
+									</h5>
+									<div class="progress-percent">
+										<span class="progress-value font-weight-bold">
+											90k
+										</span>
+										<div class="progress progress-sm">
+											<div class="progress-bar-3"></div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+
+									<h5 class="mb-1 mt-0 font-weight-normal">
+										America 
+									</h5>
+									<div class="progress-percent">
+										<span class="progress-value font-weight-bold">
+											80k 
+										</span>
+										<div class="progress progress-sm">
+											<div class="progress-bar-4"></div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="float-right dropdown-Projections">
+										<a href="" class="card-drop">
+											<i class="fas fa-ellipsis-v"></i>
+										</a>
+										<div class="dropdown-list">
+											<a href="" class="dropdown-item">Sales Report</a>
+											<a href="" class="dropdown-item">Export Report</a>
+											<a href="" class="dropdown-item">Profit</a>
+											<a href="" class="dropdown-item">Action</a>
+										</div>
+									</div>
+									<h4 class="Projections-heading mb-4">TOP SELLING PRODUCTS</h4>
+									<div class="table-responsive">
+										<table class="table mb-0">
+											<tbody>
+												<tr>
+													<td>
+														<h5 class="mb-1">
+															ASOS Ridley High Waist
+														</h5>
+														<span>07 April 2018</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$79.49
+														</h5>
+														<span>Price</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															82
+														</h5>
+														<span>Quantity</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$6,518.18
+														</h5>
+														<span>Amount</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h5 class="mb-1">
+															Marco Lightweight Shirt
+														</h5>
+														<span>25 March 2019</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$128.50
+														</h5>
+														<span>Price</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															37
+														</h5>
+														<span>Quantity</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$3,791.20
+														</h5>
+														<span>Amount</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h5 class="mb-1">
+															Half Sleeve Shirt
+														</h5>
+														<span>5 july 2019</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$78.12
+														</h5>
+														<span>Price</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															65
+														</h5>
+														<span>Quantity</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$1,345.15
+														</h5>
+														<span>Amount</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h5 class="mb-1">
+															Lightweight Jacket
+														</h5>
+														<span>01 June 2020</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$15.15
+														</h5>
+														<span>Price</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															46
+														</h5>
+														<span>Quantity</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$6,515.22
+														</h5>
+														<span>Amount</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h5 class="mb-1">
+															Marco Shoes
+														</h5>
+														<span>20 july 2019</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$79.49
+														</h5>
+														<span>Price</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															82
+														</h5>
+														<span>Quantity</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$6,518.18
+														</h5>
+														<span>Amount</span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h5 class="mb-1">
+															ASOS Ridley High Waist
+														</h5>
+														<span>07 April 2018</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$79.49
+														</h5>
+														<span>Price</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															82
+														</h5>
+														<span>Quantity</span>
+													</td>
+													<td>
+														<h5 class="mb-1">
+															$6,518.18
+														</h5>
+														<span>Amount</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3">
+							<div class="card">
+								<div class="card-body">
+									<div class="float-right dropdown-Projections">
+										<a href="" class="card-drop">
+											<i class="fas fa-ellipsis-v"></i>
+										</a>
+										<div class="dropdown-list">
+											<a href="" class="dropdown-item">Sales Report</a>
+											<a href="" class="dropdown-item">Export Report</a>
+											<a href="" class="dropdown-item">Profit</a>
+											<a href="" class="dropdown-item">Action</a>
+										</div>
+									</div>
+									<h4 class="Projections-heading mb-4">TOP SALES</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div><!-- content page end here  -->
+	</div><!--  main wrapper close here  -->
+	<!-- PROJECTIONS VS ACTUALS JS HERE  -->
+	<script type="text/javascript">
+
+											
+			Highcharts.chart('container', {
+
+		    chart: {
+		        type: 'column',
+		        styledMode: true
+		    },
+
+		    title: {
+		        text: 'Styling axes and columns'
+		    },
+
+		    yAxis: [{
+		        className: 'highcharts-color-0',
+		        title: {
+		            text: 'Primary axis'
+		        }
+		    }, {
+		        className: 'highcharts-color-1',
+		        opposite: true,
+		        title: {
+		            text: 'Secondary axis'
+		        }
+		    }],
+
+		    plotOptions: {
+		        column: {
+		            borderRadius: 2
+		        }
+		    },
+
+		    series: [{
+		        data: [1, 3, 2, 4]
+		    }, {
+		        data: [324, 124, 547, 221],
+		        yAxis: 1
+		    }]
+
+		});
+</script>
+<!-- PROJECTIONS VS ACTUALS JS END HERE  -->
+<!-- REVENUE JS START HERE  -->
+<script type="text/javascript">
+	
+	Highcharts.chart('revenue', {
+    chart: {
+        type: 'spline',
+        inverted: true
+    },
+    title: {
+        text: 'Atmosphere Temperature by Altitude'
+    },
+    subtitle: {
+        text: 'According to the Standard Atmosphere Model'
+    },
+    xAxis: {
+        reversed: false,
+        title: {
+            enabled: true,
+            text: 'Altitude'
+        },
+        labels: {
+            format: '{value} km'
+        },
+        maxPadding: 0.05,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Temperature'
+        },
+        labels: {
+            format: '{value}°'
+        },
+        lineWidth: 2
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        headerFormat: '<b>{series.name}</b><br/>',
+        pointFormat: '{point.x} km: {point.y}°C'
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                enable: false
+            }
+        }
+    },
+
+    series: [{
+        name: 'Temperature',
+        data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
+            [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]]
+
+    }]
+    
+});
+</script>
+<!-- REVENUE JS START END  HERE  -->
+<!-- vector js here  -->
+<script>
+      jQuery(document).ready(function () {
+        jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: '#333333',
+          color: '#ffffff',
+          hoverOpacity: 0.7,
+          selectedColor: '#666666',
+          enableZoom: true,
+          showTooltip: true,
+          scaleColors: ['#C8EEFF', '#006491'],
+          values: sample_data,
+          normalizeFunction: 'polynomial'
+        });
+      });
+</script>
+<!--  vector js here end here -->
+</body>
+</html>

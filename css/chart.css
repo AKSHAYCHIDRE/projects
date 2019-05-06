@@ -1,0 +1,87 @@
+#container {
+	height: 263px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+/* Link the series colors to axis colors */
+.highcharts-color-0 {
+	fill: #E3EAEF;
+	stroke: #7cb5ec;
+}
+.highcharts-legend-item > text{
+	fill:#8391a2;
+}
+.highcharts-credits{
+	display:none;
+}
+.highcharts-root .highcharts-axis.highcharts-color-1 text{
+	fill:#a8b6c3;
+}
+.highcharts-root .highcharts-axis.highcharts-color-0 text{
+	fill:#a8b6c3;	
+}
+.highcharts-grid-line{
+  stroke:none;
+}
+.highcharts-axis.highcharts-color-0 .highcharts-axis-line {
+	stroke: #353E47;
+}
+.highcharts-axis.highcharts-color-0 text {
+	fill: #7cb5ec;
+}
+.highcharts-color-1 {
+	fill: #727CF5;
+	stroke: #90ed7d;
+}
+.highcharts-column-series rect.highcharts-point{
+	stroke:none;
+}
+.highcharts-axis.highcharts-color-1 .highcharts-axis-line {
+	stroke: #E2E9EE;
+}
+.highcharts-color-0{
+  color:#AAB8C5;
+}
+.highcharts-root .highcharts-background{
+	fill:#37404a;
+}
+.highcharts-title{
+	display:none;
+}
+.highcharts-axis.highcharts-color-1 text {
+	fill: #90ed7d;
+}
+.highcharts-axis-line{
+  stroke:none;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+	stroke-width: 2px;
+}
+
+
+/* revenue chart css here */
+.highcharts-contextbutton{
+	display:none;
+}
+.highcharts-root .highcharts-subtitle{
+	color:#a8b6c3 !important;
+	fill:#a8b6c3 !important;
+	font-size:14px;
+}
+.highcharts-grid-line{
+	stroke: #364452;
+
+}
+.highcharts-tracker-line{
+	stroke:#727cf5;
+	stroke-width:1px;
+}
+.highcharts-root text tspan{
+	color:#a8b6c3;
+	fill:#a8b6c3;
+}
+.highcharts-root text{
+	color:#a8b6c3 !important;
+	fill:#a8b6c3 !important;
+}
